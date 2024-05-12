@@ -1,6 +1,6 @@
 # Common Data Structures Repository
 
-This repository aims to provide a comprehensive collection of commonly used data structures implemented in Python, C++, and Rust. Whether you're a beginner looking to learn about data structures or an experienced developer seeking reference implementations, this repository serves as a valuable resource.
+This repository aims to provide a comprehensive collection of commonly used data structures implemented in Python, C++. Whether you're a beginner looking to learn about data structures or an experienced developer seeking reference implementations, this repository serves as a valuable resource.
 
 ## Contents
 
@@ -17,7 +17,6 @@ Each data structure is implemented in three different programming languages:
 
 - **Python**: Known for its simplicity and readability, Python implementations offer clarity and ease of understanding.
 - **C++**: Renowned for its efficiency and performance, C++ implementations are ideal for high-performance computing.
-- **Rust**: Recognized for its safety and concurrency features, Rust implementations combine performance with memory safety.
 
 ## Structure
 
@@ -47,8 +46,6 @@ The repository is organized into directories based on data structure categories.
 │   └── ...
 └── ...
 ```
-
-
 
 
 ## Contributing

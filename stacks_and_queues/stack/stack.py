@@ -48,13 +48,14 @@ class Stack:
         return txt
 
     def __eq__(self, other_stack):
-        pointer_a = self.top
-        pointer_b = other_stack.top
-        counter = 1
+        if self._size != other_stack._size:
+            return False
 
-        while pointer_a.data == pointer_b.data and pointer_b.next and pointer_a.next:
-            pointer_a = pointer_a.next
-            pointer_b = pointer_b.next
+        counter = 0
+        pointer_a, pointer_b = self.top, other_stack.top
+
+        while counter < self._size and pointer_b.data == pointer_a.data:
             counter += 1
+            pointer_a, pointer_b = pointer_a.next, pointer_b.next
 
-        return True if counter == self._size and counter == other_stack._size else False
+        return counter == self._size

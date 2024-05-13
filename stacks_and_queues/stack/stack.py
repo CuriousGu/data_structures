@@ -38,13 +38,14 @@ class Stack:
         return self._size
 
     def __repr__(self):
+        txt, counter = "", 0
         pointer = self.top
-        txt = ''
-        while pointer:
-            txt += f"/{pointer.data} "
-            pointer = pointer.next
 
-        txt += f"\nstack size = {self._size} items"
+        while counter < self._size:
+            txt += f" {pointer.data} "
+            pointer = pointer.next
+            counter += 1
+
         return txt
 
     def __eq__(self, other_stack):

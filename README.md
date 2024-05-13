@@ -1,6 +1,6 @@
 # Common Data Structures Repository
 
-This repository aims to provide a comprehensive collection of commonly used data structures implemented in Python, C++. Whether you're a beginner looking to learn about data structures or an experienced developer seeking reference implementations, this repository serves as a valuable resource.
+Welcome to our data structures repository! We've got a bunch of common data structures implemented in Python and C++. Whether you're just starting out and want to learn about data structures or you're a pro looking for some reference code, you've come to the right place.
 
 ## Contents
 

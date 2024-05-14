@@ -20,7 +20,10 @@ class LinkedList:
         pointer.next = Node(item)
 
     def remove(self, index: int) -> None:
-        if self._size > index:
+        if index == 0:
+            self.head = self.head.next
+            self._size -= 1
+        elif self._size > index:
             child_node = self.head
             parent_node = None
             for _ in range(index):
@@ -40,6 +43,7 @@ class LinkedList:
             else:
                 curr_index += 1
                 pointer = pointer.next
+        raise ValueError(f"{item} is not in list")
 
     def __len__(self) -> int:
         return self._size
@@ -59,14 +63,12 @@ class LinkedList:
             for _ in range(index):
                 pointer = pointer.next
             return pointer.data
-        else:
-            raise IndexError()
+        raise IndexError()
 
     def __str__(self) -> str:
         pointer = self.head
         txt = ''
-        for _ in range(self._size):
+        while pointer:
             txt += f"{pointer.data}, "
             pointer = pointer.next
-        txt = txt[:-2]
-        return txt
+        return txt[:-2] if txt else txt

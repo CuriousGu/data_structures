@@ -16,19 +16,6 @@ class BinaryTree:
     def __len__(self) -> int:
         return self.__size
 
-    def __find_item_node(self, item: int) -> Node:
-        pointer = self.root
-
-        while pointer:
-            if item == pointer.value:
-                return pointer
-            elif pointer.value >= item:
-                pointer = pointer._left
-            else:
-                pointer = pointer._right
-
-        return None
-
     def append(self, item: int) -> None:
         pointer = self.root
 
@@ -39,8 +26,11 @@ class BinaryTree:
                 pointer = pointer._right
 
         self.__size += 1
-        pointer = BinaryTree.Node(item)
 
+        if item > pointer.value:
+            pointer.right = BinaryTree.Node(item)
+        else:
+            pointer.left = BinaryTree.Node(item)
 
 a = BinaryTree()
 a.append(2)

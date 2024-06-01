@@ -10,7 +10,7 @@ class BinaryTree:
         '''
         root_value = tree's root. If NULL, tree will be created empty
         '''
-        self.root = BinaryTree.Node(root_value)
+        self.root = BinaryTree.Node(root_value) if root_value else None
         self.__size = 0 if not self.root else 1
 
     def __len__(self) -> int:
@@ -40,3 +40,8 @@ class BinaryTree:
 
         self.__size += 1
         pointer = BinaryTree.Node(item)
+
+
+a = BinaryTree()
+a.append(2)
+print(len(a))

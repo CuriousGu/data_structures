@@ -42,29 +42,3 @@ class Queue:
 
     def __len__(self):
         return self._size
-
-
-def main():
-    q = Queue()
-    
-    # Adicionando elementos à fila
-    q.append(1)
-    q.append(2)
-    q.append(3)
-    q.append(4)
-    q.append(5)
-    
-    print("Fila após adições:", q)
-    print("Tamanho da fila:", len(q))
-    
-    # Removendo elementos da fila
-    print("Elemento removido:", q.remove())
-    print("Fila após remoção:", q)
-    print("Tamanho da fila:", len(q))
-    
-    print("Elemento removido:", q.remove())
-    print("Fila após remoção:", q)
-    print("Tamanho da fila:", len(q))
-
-if __name__ == "__main__":
-    main()

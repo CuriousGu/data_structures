@@ -12,7 +12,10 @@ class LinkedList:
     def append(self, item: any) -> None:
         self._size += 1
         if not self.head:
-            self.head = Node(item)
+           <<<<<<< main
+23
+ 
+ self.head = Node(item)
             return
         pointer = self.head
         while pointer.next:
@@ -72,3 +75,4 @@ class LinkedList:
             txt += f"{pointer.data}, "
             pointer = pointer.next
         return txt[:-2] if txt else txt
+

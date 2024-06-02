@@ -12,12 +12,30 @@ class LinkedList:
     def append(self, item: any) -> None:
         self._size += 1
         if not self.head:
-            self.head = Node(item)
+           <<<<<<< main
+23
+ 
+ self.head = Node(item)
             return
         pointer = self.head
         while pointer.next:
             pointer = pointer.next
         pointer.next = Node(item)
+
+    def remove(self, index: int) -> None:
+        if index == 0:
+            self.head = self.head.next
+            self._size -= 1
+        elif self._size > index:
+            child_node = self.head
+            parent_node = None
+            for _ in range(index):
+                parent_node = child_node
+                child_node = child_node.next
+            parent_node.next = child_node.next
+            self._size -= 1
+        else:
+            raise IndexError()
 
     def index(self, item: any) -> int:
         pointer = self.head
@@ -48,13 +66,13 @@ class LinkedList:
             for _ in range(index):
                 pointer = pointer.next
             return pointer.data
-        else:
-            raise IndexError()
+        raise IndexError()
 
     def __str__(self) -> str:
         pointer = self.head
         txt = ''
-        for _ in range(self._size):
+        while pointer:
             txt += f"{pointer.data}, "
             pointer = pointer.next
-        txt = txt[:-2]
+        return txt[:-2] if txt else txt
+

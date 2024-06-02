@@ -67,6 +67,7 @@ class BinaryTree:
         elif pointer._left:
             replace_value = pointer._left
             while replace_value._right:
+                parent = replace_value
                 replace_value = replace_value._right
             pointer.value = replace_value.value
             parent._right = None
